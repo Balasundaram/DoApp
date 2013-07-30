@@ -1,0 +1,211 @@
+ <!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+  <link rel="stylesheet" href="css/style.css">
+<script src="iscroll-lite.js"></script>
+<script src="app.js"></script>
+  <title>PhoneGapDoosra</title>
+</head>
+
+<script>function goBack()
+  {
+  window.history.back()
+  }
+function myFunction()
+{
+
+
+  document.write("img src"="wa.jpeg");
+}
+}
+var theScroll;
+function scroll(){
+    theScroll = new iScroll('wrapper');
+}
+document.addEventListener('DOMContentLoaded', scroll, false);
+function page(toPage) {
+    var toPage = $(toPage),
+    fromPage = $("#pages .current");
+    if(toPage.hasClass("current") || toPage === fromPage) {
+        return;
+    };
+    toPage.addClass("current fade in").one("webkitAnimationEnd", function(){
+        fromPage.removeClass("current fade out");
+        toPage.removeClass("fade in")
+    });
+    fromPage.addClass("fade out");
+}
+
+$('#tab-bar a').on('click', function(e){
+    e.preventDefault();
+    var nextPage = $(e.target.hash);
+    $("#pages .current").removeClass("current");
+    nextPage.addClass("current");
+});</script>
+<style type="text/css">
+html, body{
+ margin: 0;
+ padding: 0;
+ border: 0;
+}
+body {
+ font-family:Arial,  sans-serif;
+ line-height:1.5;
+ font-size:16px;
+ background: #fff;
+ padding:5px;
+ color: #000;
+ word-wrap: break-word;
+ -webkit-text-size-adjust: none;
+}
+h1, h2, h3, h4, h5, h6
+{ 
+font-weight: normal;
+ }
+p img 
+{ float: left;
+ margin: 0 10px 5px 0;
+ padding: 0; }
+img {
+ border: 0; 
+max-width: 100%; }
+
+
+
+body{
+    background: #222;
+}
+header{
+    top:0; left:0;
+    height:45px;
+}
+footer {
+    bottom:0; left:0;
+    height:48px;
+    background-color:#c27b00;
+    border-top:1px solid #eee;
+}
+header, footer{
+    background-color:#deb500;
+    padding:0;
+    position:absolute;
+    z-index:2;
+    font-size:20px;
+    width:100%;
+    text-align:center;
+    color:#f3f3f3;
+    font-weight:bold;
+    text-shadow:0 -1px 0 rgba(0,0,0,0.5);
+    line-height:45px;
+}
+h1{
+    margin:0;
+    text-transform: uppercase;
+}
+#wrapper {
+    position:absolute;
+    z-index:1;
+    top:45px; bottom:0px; left:0;
+    width:100%;
+    overflow:auto;
+}
+#main-content {
+    position:absolute;
+    z-index:1;
+    width:100%;
+    padding:0;
+}
+#tab-bar{
+    margin:0;
+    padding:0;
+}
+#tab-bar li {
+    display: inline;
+    float:left;
+    width: 25%;
+}
+#tab-bar a {
+    color: #cdcdcd;
+    display: block;
+    font-weight: bold;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    -webkit-touch-callout:none;}
+#pages > div {
+    display: none;
+}
+#pages > div.current {
+    display: block;
+}#pages{
+    position:relative;
+}
+/* Update this style */
+#pages > div {
+    display: none;
+    position: absolute;
+    top:0;left:0;
+    width:100%;
+}
+.in, .out {
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-duration: 400ms;
+}
+@-webkit-keyframes fade-in {
+    from { opacity: 0; } to { opacity: 1; }
+}.fade.in {
+    -webkit-animation-name: fade-in;
+    z-index: 5;
+}
+.fade.out {
+    z-index: 0;
+}</style>
+
+<body onload="myFunction()">
+<header>
+    <h1>Doosra
+<INPUT Type="image" VALUE="goBack" onClick="history.go(-1);return true;" src="back.jpeg" alt="" width="45" height="45" align="left">
+<a href="index.html"><img border="0" src="home1.jpeg" alt="" width="45" height="45" align="right">
+</a>
+</h1>
+</header>
+
+<div id="wrapper">
+    <div id="main-content">technolgy page
+</div>
+ <footer>   
+<ul id="tab-bar">
+    <li>
+        <a href="About.html"><img border="0" src="about.jpeg" alt="" width="99" height="48">
+</a>
+    
+    </li><li>
+        <a href="Team.html"><img border="0" src="team1.jpeg" alt="" width="99" height="48">
+</a>
+    </li>
+    <li>
+        <a href="Technology.html"><img border="0" src="technology.jpeg" alt="" width="99" height="48">
+</a>
+    </li>
+    <li>
+        <a href="UrlUsed.html"><img border="0" src="url.jpeg" alt="" width="99" height="48"></a>
+    </li>
+</ul>
+    
+</footer>
+</div>
+<div id="pages">
+    <div id="About">
+    </div>
+    <div id="Team">
+    </div><div id="Technology"  class="current">
+    </div>
+    <div id="urlUsed">
+    </div> 
+</div>
+
+</body>
+</html>
